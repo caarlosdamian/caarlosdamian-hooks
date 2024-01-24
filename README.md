@@ -10,7 +10,9 @@ Empower your React applications with caarlosdamian-hooks—a versatile collectio
 ### Install
 
     npm install caarlosdamian-hooks 
-    
+
+or
+
     yarn add caarlosdamian-hooks
 
 ## Usage
