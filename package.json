@@ -24,7 +24,10 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "@types/react": "^18.2.48",
+    "semantic-release": "^23.0.0",
     "tsup": "^8.0.1"
   }
 }
