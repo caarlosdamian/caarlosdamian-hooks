@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.0.1...v1.1.0) (2024-01-27)
+
+
+### Features
+
+* **hooks:** added useEffectOnce custom hook ([0cc66a8](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/0cc66a8fcf5ce1dd4c62cb9b02aec5d3738e3983))
+
 ## [1.0.1](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.0.0...v1.0.1) (2024-01-27)
 
 
