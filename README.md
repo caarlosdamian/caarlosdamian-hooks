@@ -8,6 +8,7 @@ Empower your React applications with caarlosdamian-hooks a versatile collection 
 -  **useToggle**: Effortlessly manage boolean state with a toggle function.
 -  **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
 -  **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
+-  **useEffectOnce**: Execute a callback only once when a component mounts.
 
 ### Install
 
@@ -106,5 +107,27 @@ const ScrollComponent: React.FC = () => {
 };
 
 export default ScrollComponent;
+```
+
+### `useEffectOnce`
+
+The `useEffectOnce`hook allows you to run a callback function only once when a React component mounts. Here's a brief example of how to use it:
+
+```jsx
+import { useEffectOnce } from 'caarlosdamian-hooks';
+
+function App() {
+  // This callback will be executed only once when the component mounts
+  useEffectOnce(() => {
+    console.log('Component has mounted!');
+    // Perform any one-time initialization or side effects here
+  });
+
+  return (
+    <>
+      {/* Your component JSX */}
+    </>
+  );
+}
 ```
 
