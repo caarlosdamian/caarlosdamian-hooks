@@ -9,6 +9,7 @@ Empower your React applications with caarlosdamian-hooks a versatile collection 
 -  **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
 -  **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
 -  **useEffectOnce**: Execute a callback only once when a component mounts.
+-  **useFetch**: Simplify data fetching in React components with ease.
 
 ### Install
 
@@ -111,7 +112,7 @@ export default ScrollComponent;
 
 ### `useEffectOnce`
 
-The `useEffectOnce`hook allows you to run a callback function only once when a React component mounts. Here's a brief example of how to use it:
+The `useEffectOnce` hook allows you to run a callback function only once when a React component mounts. Here's a brief example of how to use it:
 
 ```jsx
 import { useEffectOnce } from 'caarlosdamian-hooks';
@@ -126,6 +127,36 @@ function App() {
   return (
     <>
       {/* Your component JSX */}
+    </>
+  );
+}
+```
+
+### `useFetch`
+
+The `useFetch` hook streamlines data fetching in your React components. It provides an easy-to-use interface for handling asynchronous requests and managing loading, data, and error states. Here's an example of how to use it:
+
+```jsx
+import { useFetch } from 'caarlosdamian-hooks';
+
+function App() {
+  // Define the fetch parameters
+  const fetchConfig = {
+    url: 'https://api.example.com/data',
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  // Destructure the hook return values
+  const { isLoading, data, error, isError } = useFetch(fetchConfig);
+
+  return (
+    <>
+      {isLoading && <p>Loading...</p>}
+      {isError && <p>Error occurred while fetching data.</p>}
+      {data && <p>Data: {JSON.stringify(data)}</p>}
     </>
   );
 }
