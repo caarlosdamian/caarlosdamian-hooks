@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.2.0...v1.3.0) (2024-01-29)
+
+
+### Features
+
+* **hooks:** Added new useDebounce hook. ([#1](https://github.com/caarlosdamian/caarlosdamian-hooks/issues/1)) ([20921f2](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/20921f2de8d687d0f1dd9359321a0dfbc9033c2f))
+
 # [1.2.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.1.0...v1.2.0) (2024-01-28)
 
 
