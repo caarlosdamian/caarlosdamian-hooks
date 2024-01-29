@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.1.0...v1.2.0) (2024-01-28)
+
+
+### Features
+
+* **hooks:** added new useFetch hook ([ab0e750](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/ab0e7503b7c91d7a6e7ecd02845cc80a2243c5bd))
+
 # [1.1.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.0.1...v1.1.0) (2024-01-27)
 
 
