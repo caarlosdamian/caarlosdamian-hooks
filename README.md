@@ -2,18 +2,18 @@
 
 Empower your React applications with caarlosdamian-hooks a versatile collection of meticulously crafted hooks, enhancing productivity, simplifying state management, and seamlessly integrating APIs for a streamlined development experience.
 
-
 ### Features
 
--  **useToggle**: Effortlessly manage boolean state with a toggle function.
--  **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
--  **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
--  **useEffectOnce**: Execute a callback only once when a component mounts.
--  **useFetch**: Simplify data fetching in React components with ease.
+- **useToggle**: Effortlessly manage boolean state with a toggle function.
+- **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
+- **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
+- **useEffectOnce**: Execute a callback only once when a component mounts.
+- **useFetch**: Simplify data fetching in React components with ease.
+- **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
 
 ### Install
 
-    npm install caarlosdamian-hooks 
+    npm install caarlosdamian-hooks
 
 or
 
@@ -36,7 +36,7 @@ function App() {
     <>
       {/* Button to toggle the state */}
       <button onClick={toggle}>
-        {isToggled ? 'It Works!' : 'Doesn\'t Work!'}
+        {isToggled ? 'It Works!' : "Doesn't Work!"}
       </button>
     </>
   );
@@ -124,11 +124,7 @@ function App() {
     // Perform any one-time initialization or side effects here
   });
 
-  return (
-    <>
-      {/* Your component JSX */}
-    </>
-  );
+  return <>{/* Your component JSX */}</>;
 }
 ```
 
@@ -162,3 +158,43 @@ function App() {
 }
 ```
 
+### `useDebounce`
+
+The `useDebounce` hook allows you to debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks. Here's a brief example of how to use it:
+
+```jsx
+import { useDebounce } from './caarlosdamian-hooks';
+
+const DebounceExample: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Debounce the search function
+  const debouncedSearch = useDebounce(async (term: string) => {
+    // Perform your asynchronous search operation here
+    console.log('Searching for:', term);
+  }, 300); // Debounce for 300 milliseconds
+
+  // Handle changes in the search input
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newSearchTerm = event.target.value;
+    setSearchTerm(newSearchTerm);
+
+    // Call the debounced search function with the latest search term
+    debouncedSearch(newSearchTerm);
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={searchTerm}
+        onChange={handleSearchChange}
+        placeholder="Search..."
+      />
+      <p>Performing a debounced search for: {searchTerm}</p>
+    </div>
+  );
+};
+
+export default DebounceExample;
+```
