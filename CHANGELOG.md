@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.3.0...v1.4.0) (2024-02-02)
+
+
+### Features
+
+* **hooks:** added new useCursor hook. ([0693517](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/069351794887d12d94dc90edae9f6875b6adca09))
+
 # [1.3.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.2.0...v1.3.0) (2024-01-29)
 
 
