@@ -10,6 +10,7 @@ Empower your React applications with caarlosdamian-hooks a versatile collection 
 - **useEffectOnce**: Execute a callback only once when a component mounts.
 - **useFetch**: Simplify data fetching in React components with ease.
 - **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
+- **useCursor**: Designed to track and return the cursor's position on the screen.
 
 ### Install
 
@@ -197,4 +198,26 @@ const DebounceExample: React.FC = () => {
 };
 
 export default DebounceExample;
+```
+
+### `useCursor`
+
+The `useCursor` hook tracks the cursor's position on the screen, providing x and y coordinates in real-time. It's perfect for creating interactive UI elements or for tracking user interaction within your application. Here's a simple example:
+
+```jsx
+import React from 'react';
+import { useCursor } from 'caarlosdamian-hooks';
+
+const CursorPositionComponent: React.FC = () => {
+  const { positionX, positionY } = useCursor();
+
+  return (
+    <div>
+      <h2>Cursor Position</h2>
+      <p>X: {positionX}, Y: {positionY}</p>
+    </div>
+  );
+};
+
+export default CursorPositionComponent;
 ```
