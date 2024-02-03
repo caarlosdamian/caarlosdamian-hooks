@@ -11,6 +11,7 @@ Empower your React applications with caarlosdamian-hooks a versatile collection 
 - **useFetch**: Simplify data fetching in React components with ease.
 - **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
 - **useCursor**: Designed to track and return the cursor's position on the screen.
+- **useDoubleClick**: Allows you to handle both single-click and double-click events with ease. You can use it to define custom behavior when a user clicks once or double-clicks on an element.
 
 ### Install
 
@@ -220,4 +221,36 @@ const CursorPositionComponent: React.FC = () => {
 };
 
 export default CursorPositionComponent;
+```
+
+### `useDoubleClick`
+
+The `useDoubleClick` hook is a React hook designed to simplify handling both single-click and double-click events on elements in your application. It allows you to define custom behavior for single and double clicks with ease. Here's a simple example:
+
+```jsx
+import { useDoubleClick } from 'caarlosdamian-hooks';
+import React from 'react';
+
+function MyComponent() {
+  const handleSingleClick = (event) => {
+    console.log('Single click event:', event);
+    // Perform actions for a single click
+  };
+
+  const handleDoubleClick = (event) => {
+    console.log('Double click event:', event);
+    // Perform actions for a double click
+  };
+
+  const handleClick = useDoubleClick(handleDoubleClick, handleSingleClick);
+
+  return (
+    <button onClick={handleClick}>
+      Click me (single or double)!
+    </button>
+  );
+}
+
+export default MyComponent;
+
 ```
