@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.4.0...v1.5.0) (2024-02-03)
+
+
+### Features
+
+* **hooks:** added useDoubleClick hook. ([c85da85](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/c85da85cffc87d7a7f49d66a5a40de1a411d98b2))
+
 # [1.4.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.3.0...v1.4.0) (2024-02-02)
 
 
