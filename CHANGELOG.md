@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.5.0...v1.6.0) (2024-02-04)
+
+
+### Features
+
+* **hooks:** added useTimer hook. ([3fb761b](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/3fb761b067287e176d0055b2895c85ceeab4ffeb))
+
 # [1.5.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.4.0...v1.5.0) (2024-02-03)
 
 
