@@ -16,4 +16,5 @@ export const useTimer = () => {
   }, []);
 
   return { setTimer, clearTimer };
+  
 };
