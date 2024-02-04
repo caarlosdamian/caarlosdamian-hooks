@@ -6,3 +6,4 @@ export { useFetch } from './hooks/useFetch';
 export { useDebounce } from './hooks/useDebounce';
 export { useCursor } from './hooks/useCursor';
 export { useDoubleClick } from './hooks/useDoubleClick';
+export { useTimer } from './hooks/useTimer';

@@ -12,6 +12,7 @@ Empower your React applications with caarlosdamian-hooks a versatile collection 
 - **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
 - **useCursor**: Designed to track and return the cursor's position on the screen.
 - **useDoubleClick**: Allows you to handle both single-click and double-click events with ease. You can use it to define custom behavior when a user clicks once or double-clicks on an element.
+- **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay..
 
 ### Install
 
@@ -215,7 +216,9 @@ const CursorPositionComponent: React.FC = () => {
   return (
     <div>
       <h2>Cursor Position</h2>
-      <p>X: {positionX}, Y: {positionY}</p>
+      <p>
+        X: {positionX}, Y: {positionY}
+      </p>
     </div>
   );
 };
@@ -244,13 +247,44 @@ function MyComponent() {
 
   const handleClick = useDoubleClick(handleDoubleClick, handleSingleClick);
 
-  return (
-    <button onClick={handleClick}>
-      Click me (single or double)!
-    </button>
-  );
+  return <button onClick={handleClick}>Click me (single or double)!</button>;
 }
 
 export default MyComponent;
+```
 
+### `useTimer`
+
+The `useTimer` hook simplifies the handling of timers in your React components. Here's a simple example:
+
+```jsx
+import { useTimer } from 'caarlosdamian-hooks';
+
+function TimerComponent() {
+  const { setTimer, clearTimer } = useTimer();
+
+  // Function to be executed after a delay
+  const delayedFunction = () => {
+    console.log('Timer callback executed!');
+  };
+
+  // Start a timer to execute the function after 2000 milliseconds (2 seconds)
+  const startTimer = () => {
+    setTimer(delayedFunction, 2000);
+  };
+
+  // Stop the timer if needed
+  const stopTimer = () => {
+    clearTimer();
+  };
+
+  return (
+    <>
+      <button onClick={startTimer}>Start Timer</button>
+      <button onClick={stopTimer}>Stop Timer</button>
+    </>
+  );
+}
+
+export default TimerComponent;
 ```
