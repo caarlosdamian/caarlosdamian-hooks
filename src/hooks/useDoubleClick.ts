@@ -1,4 +1,5 @@
-import { useCallback, useRef, MouseEvent } from 'react';
+import { useCallback, MouseEvent } from 'react';
+import { useTimer } from './useTimer';
 
 type ClickCallback = (event: MouseEvent<any>) => any | void;
 
@@ -7,27 +8,17 @@ export const useDoubleClick = <T>(
   click: ClickCallback,
   timeout = 250
 ) => {
-  const clickTimeout = useRef<ReturnType<typeof setTimeout> | undefined>(
-    undefined
-  );
-
-  const clearClickTimeout = () => {
-    if (clickTimeout.current !== undefined) {
-      clearTimeout(clickTimeout.current);
-      clickTimeout.current = undefined;
-    }
-  };
+  const { clearTimer, setTimer } = useTimer();
 
   return useCallback(
     (event: MouseEvent<T>) => {
-      clearClickTimeout();
+      clearTimer();
       if (click && event.detail === 1) {
-        clickTimeout.current = setTimeout(() => {
-          click(event);
-        }, timeout);
+        setTimer(() => click(event), timeout);
       }
       if (event.detail % 2 === 0) {
         doubleClick(event);
+        setTimer(() => doubleClick(event), timeout);
       }
     },
     [click, doubleClick, timeout]
