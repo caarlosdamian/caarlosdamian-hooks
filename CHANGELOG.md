@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.6.0...v1.6.1) (2024-02-04)
+
+
+### Performance Improvements
+
+* **hooks:** added useTimer hook to useDebounce hook and useDoubleClick hook to remove unnecesary repeated code. ([f8f1968](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/f8f19682d476022f2eae12275ce5a58103629c8d))
+
 # [1.6.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.5.0...v1.6.0) (2024-02-04)
 
 
