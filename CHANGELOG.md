@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.6.1...v1.7.0) (2024-02-07)
+
+
+### Features
+
+* **hooks:** Added new useArray hook. ([e775c62](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/e775c621f67c3e268fa0ebed6356b570e0d7b134))
+
 ## [1.6.1](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.6.0...v1.6.1) (2024-02-04)
 
 
