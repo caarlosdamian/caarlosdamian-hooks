@@ -1,18 +1,19 @@
 # caarlosdamian-hooks
 
-Empower your React applications with caarlosdamian-hooks a versatile collection of meticulously crafted hooks, enhancing productivity, simplifying state management, and seamlessly integrating APIs for a streamlined development experience.
+Empower your React applications with caarlosdamian-hooks, a versatile collection of meticulously crafted hooks. These hooks are designed to enhance your productivity, simplify state management, and seamlessly integrate APIs, providing a streamlined development experience. With caarlosdamian-hooks, you can leverage reusable functionalities to make your application development faster and more efficient.
 
 ### Features
 
-- **useToggle**: Effortlessly manage boolean state with a toggle function.
-- **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
-- **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
+- **useArray**: Manages an array state within your React components, offering a variety of methods for array manipulation.
+- **useCursor**: Designed to track and return the cursor's position on the screen.
+- **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
+- **useDoubleClick**: Allows you to handle both single-click and double-click events with ease. You can use it to define custom behavior when a user clicks once or double-clicks on an element.
 - **useEffectOnce**: Execute a callback only once when a component mounts.
 - **useFetch**: Simplify data fetching in React components with ease.
-- **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
-- **useCursor**: Designed to track and return the cursor's position on the screen.
-- **useDoubleClick**: Allows you to handle both single-click and double-click events with ease. You can use it to define custom behavior when a user clicks once or double-clicks on an element.
-- **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay..
+- **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
+- **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
+- **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay.
+- **useToggle**: Effortlessly manage boolean state with a toggle function.
 
 ### Install
 
@@ -287,4 +288,59 @@ function TimerComponent() {
 }
 
 export default TimerComponent;
+```
+
+### `useArray`
+
+The `useArray` hook is designed to manage and manipulate array states within your React components seamlessly. It provides methods for adding, removing elements, and more, ensuring efficient state management and reactivity. Here's a simple example:
+
+```jsx
+import { useArray } from 'caarlosdamian-hooks';
+
+function App() {
+  // Initialize the hook with an initial array
+  const {
+    array,
+    addElementAtTheEnd,
+    addElementAtPosition,
+    removeElement,
+    removeFirstElement,
+    removeLastElement,
+    resetArray,
+    replaceArray,
+    getElementAtIndex,
+  } = useArray([1, 2, 3]);
+
+  // Example usage
+  return (
+    <div>
+      {/* Display array */}
+      <div>Array: {array.join(', ')}</div>
+
+      {/* Add element at the end */}
+      <button onClick={() => addElementAtTheEnd(4)}>Add 4 at the end</button>
+
+      {/* Add element at position */}
+      <button onClick={() => addElementAtPosition(5, 2)}>Add 5 at position 2</button>
+
+      {/* Remove first element */}
+      <button onClick={removeFirstElement}>Remove first element</button>
+
+      {/* Remove last element */}
+      <button onClick={removeLastElement}>Remove last element</button>
+
+      {/* Reset array */}
+      <button onClick={resetArray}>Reset Array</button>
+
+      {/* Replace array */}
+      <button onClick={() => replaceArray([10, 20, 30])}>Replace Array</button>
+
+      {/* Get element at index */}
+      <div>Element at index 1: {getElementAtIndex(1)}</div>
+    </div>
+  );
+}
+
+export default App;
+
 ```
