@@ -12,6 +12,7 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 - **useFetch**: Simplify data fetching in React components with ease.
 - **useScreenDetails**: Simplifies the retrieval of screen dimensions within your React components.
 - **useScroll**: Simplifies the management of scroll-related events within your React components. Provides information about the scroll direction and allows you to define callbacks for various scroll scenarios.
+- **useSlider**: Easy and effective way to create slider functionality in your React applications.
 - **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay.
 - **useToggle**: Effortlessly manage boolean state with a toggle function.
 
@@ -342,5 +343,26 @@ function App() {
 }
 
 export default App;
+
+```
+
+### `useSlider`
+
+The `useSlider` hook provides an easy and effective way to create slider functionality in your React applications. It is designed to handle the navigation through an array of items, allowing you to cycle through them either forward or backward. Here's a simple example:
+
+```jsx
+import { useSlider } from 'caarlosdamian-hooks';
+
+const ImageSlider = ({ images }) => {
+  const { actualPosition, goNext, goPrevius } = useSlider(images);
+
+  return (
+    <div>
+      <button onClick={goPrevius}>Previous</button>
+      <img src={images[actualPosition]} alt="Slider Image" />
+      <button onClick={goNext}>Next</button>
+    </div>
+  );
+};
 
 ```
