@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.8.0...v1.9.0) (2024-02-12)
+
+
+### Features
+
+* **hooks:** added new useForm hook ([6c05679](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/6c05679941c3e0a5ceb0f324f8f919f696266417))
+
 # [1.8.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.7.0...v1.8.0) (2024-02-09)
 
 

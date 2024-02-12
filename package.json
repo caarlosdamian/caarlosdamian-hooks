@@ -1,6 +1,6 @@
 {
   "name": "caarlosdamian-hooks",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Empower your React applications with caarlosdamian-hooks—a versatile collection of meticulously crafted hooks, enhancing productivity, simplifying state management, and seamlessly integrating APIs for a streamlined development experience.",
   "main": "./dist/index/js",
   "module": "./dist/index.mjs",
