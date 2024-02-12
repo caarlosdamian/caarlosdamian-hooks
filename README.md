@@ -15,6 +15,7 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 - **useSlider**: Easy and effective way to create slider functionality in your React applications.
 - **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay.
 - **useToggle**: Effortlessly manage boolean state with a toggle function.
+- **useForm**: Simplifies form handling in React applications, providing an easy way to manage form state and handle input changes.
 
 ### Install
 
@@ -364,5 +365,42 @@ const ImageSlider = ({ images }) => {
     </div>
   );
 };
+
+```
+
+### `useForm`
+
+The `useForm`  hook simplifies form handling in React applications, providing an easy way to manage form state and handle input changes. Here's a simple example:
+
+```jsx
+import { useForm } from 'caarlosdamian-hooks';
+
+function FormComponent() {
+  const { values, handleChange, watch } = useForm({ name: '', email: '' });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(values); // Do something with the form values
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        name="name"
+        value={values.name}
+        onChange={handleChange}
+        placeholder="Name"
+      />
+      <input
+        name="email"
+        value={values.email}
+        onChange={handleChange}
+        placeholder="Email"
+      />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
 
 ```
