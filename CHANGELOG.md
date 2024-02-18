@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.9.0...v1.10.0) (2024-02-18)
+
+
+### Features
+
+* **hooks:** added new useRefState hook. ([c10c4b2](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/c10c4b200e8cadbefd8c41505cfb039293d69500))
+
 # [1.9.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.8.0...v1.9.0) (2024-02-12)
 
 
