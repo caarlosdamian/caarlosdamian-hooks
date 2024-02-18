@@ -16,6 +16,7 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 - **useTimer**: Designed to simplify the management of timers and timeouts within your React components. It provides functions to set and clear timers, making it easier to perform actions after a specified delay.
 - **useToggle**: Effortlessly manage boolean state with a toggle function.
 - **useForm**: Simplifies form handling in React applications, providing an easy way to manage form state and handle input changes.
+- **useRefState**: A hook for maintaining a mutable reference which does not trigger re-renders. Ideal for tracking values without affecting the component's output.
 
 ### Install
 
@@ -401,6 +402,37 @@ function FormComponent() {
     </form>
   );
 }
+
+
+```
+
+### `useRefState`
+
+The `useRefState` hook provides a way to manage a reference in React that persists across re-renders but does not cause re-renders itself. It's useful for tracking values or states within a component that do not directly impact the rendering output, such as storing the previous value of a state or managing focus without triggering unnecessary updates. Here's a simple example:
+
+```jsx
+import { useRefState } from 'caarlosdamian-hooks';
+
+function MyComponent() {
+  // Initialize useRefState hook
+  const { ref, setRef } = useRefState();
+
+  // Function to update the ref's current value
+  const updateRef = () => {
+    setRef(Math.random()); // Example: Update the ref to a random number
+    console.log(ref); // Access the updated ref value
+  };
+
+  return (
+    <div>
+      <p>The current ref value is: {ref.current}</p>
+      <button onClick={updateRef}>Update Ref</button>
+    </div>
+  );
+}
+
+export default MyComponent;
+
 
 
 ```
