@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.10.0...v1.11.0) (2024-03-04)
+
+
+### Features
+
+* **hooks:** added new method to useSlider hook ([7ab0d10](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/7ab0d104977759b8c504cf92217bec097f3d23fa))
+
 # [1.10.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.9.0...v1.10.0) (2024-02-18)
 
 
