@@ -356,12 +356,13 @@ The `useSlider` hook provides an easy and effective way to create slider functio
 import { useSlider } from 'caarlosdamian-hooks';
 
 const ImageSlider = ({ images }) => {
-  const { actualPosition, goNext, goPrevius } = useSlider(images);
+  const { actualPosition, goNext, goPrevius, goToItem } = useSlider(images);
 
   return (
     <div>
       <button onClick={goPrevius}>Previous</button>
       <img src={images[actualPosition]} alt="Slider Image" />
+      <button onClick={() => goToItem(index)}>GoToItem</button>
       <button onClick={goNext}>Next</button>
     </div>
   );
