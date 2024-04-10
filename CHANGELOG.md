@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.11.0...v1.12.0) (2024-04-10)
+
+
+### Features
+
+* **hooks:** added new useLocalStorageState hook ([b898e56](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/b898e56095d0bdc30467aacb4867a250439812ef))
+
 # [1.11.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.10.0...v1.11.0) (2024-03-04)
 
 
