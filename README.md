@@ -17,6 +17,7 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 - **useToggle**: Effortlessly manage boolean state with a toggle function.
 - **useForm**: Simplifies form handling in React applications, providing an easy way to manage form state and handle input changes.
 - **useRefState**: A hook for maintaining a mutable reference which does not trigger re-renders. Ideal for tracking values without affecting the component's output.
+- **useLocaleStorage**: A hook designed for managing state in React components while persisting the state data to the browser's local storage. This hook is particularly useful for scenarios where you need to maintain state across page reloads or component unmounts.
 
 ### Install
 
@@ -435,5 +436,34 @@ function MyComponent() {
 export default MyComponent;
 
 
+
+```
+
+### `useLocaleStorage`
+
+The `useLocaleStorage` hook allows you to store and retrieve stateful data in the local storage of the browser. It takes a key to identify the stored data, a default value to be used when the data is not found in the local storage, and options for serialization and deserialization of the stored data. Here's a simple example:
+
+```jsx
+import React from 'react';
+import { useLocaleStorage } from 'caarlosdamian-hooks';
+
+function MyComponent() {
+  // Example usage of useLocaleStorage hook
+  const [data, setData] = useLocaleStorage('myDataKey', 'default value');
+
+  // Modify data using setData function
+  const updateData = () => {
+    setData('new value');
+  };
+
+  return (
+    <div>
+      <p>Data stored in local storage: {data}</p>
+      <button onClick={updateData}>Update Data</button>
+    </div>
+  );
+}
+
+export default MyComponent;
 
 ```
