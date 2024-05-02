@@ -18,6 +18,8 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 - **useForm**: Simplifies form handling in React applications, providing an easy way to manage form state and handle input changes.
 - **useRefState**: A hook for maintaining a mutable reference which does not trigger re-renders. Ideal for tracking values without affecting the component's output.
 - **useLocaleStorage**: A hook designed for managing state in React components while persisting the state data to the browser's local storage. This hook is particularly useful for scenarios where you need to maintain state across page reloads or component unmounts.
+- **useAsync**: Simplifies handling of asynchronous operations in React components by managing loading, error, and data states with ease.
+
 
 ### Install
 
@@ -460,6 +462,66 @@ function MyComponent() {
     <div>
       <p>Data stored in local storage: {data}</p>
       <button onClick={updateData}>Update Data</button>
+    </div>
+  );
+}
+
+export default MyComponent;
+
+```
+
+### `useAsync`
+
+The `useAsync` hook simplifies handling of asynchronous operations in React components by managing loading, error, and data states with ease. It takes no parameters and returns an object containing the current state of the asynchronous operation and a function to run asynchronous tasks. Here's a simple example:
+
+```jsx
+import React, { useState } from 'react';
+import { useAsync } from 'caarlosdamian-hooks';
+
+function MyComponent() {
+  // Example usage of useAsync hook
+  const { status, data, error, run } = useAsync();
+
+  // State to store input value
+  const [inputValue, setInputValue] = useState('');
+
+  // Function to fetch data asynchronously
+  const fetchData = async () => {
+    // Simulating fetching data from an API
+    try {
+      const response = await fetch(`https://api.example.com/data?q=${inputValue}`);
+      const data = await response.json();
+      // Updating data state
+      run(data);
+    } catch (error) {
+      // Handling errors
+      run(error);
+    }
+  };
+
+  return (
+    <div>
+      <input 
+        type="text" 
+        value={inputValue} 
+        onChange={(e) => setInputValue(e.target.value)} 
+        placeholder="Enter search query" 
+      />
+      <button onClick={fetchData}>Fetch Data</button>
+      
+      {/* Display loading state */}
+      {status === 'loading' && <p>Loading...</p>}
+      
+      {/* Display error if any */}
+      {status === 'error' && <p>Error: {error.message}</p>}
+      
+      {/* Display data if available */}
+      {status === 'success' && (
+        <div>
+          <p>Data:</p>
+          <pre>{JSON.stringify(data, null, 2)}</pre>
+        </div>
+      )}
     </div>
   );
 }
