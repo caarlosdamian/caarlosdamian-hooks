@@ -1,3 +1,11 @@
+# [1.13.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.12.0...v1.13.0) (2024-05-02)
+
+
+### Features
+
+* **docs:** added new docs for useAsync hook ([fa784d8](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/fa784d851d21902f31a5dfd8a22a176d840c6a23))
+* **hooks:** added new useAsync hook ([2b4d68c](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/2b4d68c47afdac6d18e92be4f7a7ba33a83fc64a))
+
 # [1.12.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.11.0...v1.12.0) (2024-04-10)
 
 
