@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.13.0...v1.14.0) (2024-08-21)
+
+
+### Features
+
+* **hooks:** added useCookie hook ([f15ab1d](https://github.com/caarlosdamian/caarlosdamian-hooks/commit/f15ab1d39002c46ac4cc2be3f1fc6d645ff1b1fb))
+
 # [1.13.0](https://github.com/caarlosdamian/caarlosdamian-hooks/compare/v1.12.0...v1.13.0) (2024-05-02)
 
 
