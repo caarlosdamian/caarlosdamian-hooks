@@ -5,6 +5,7 @@ Empower your React applications with caarlosdamian-hooks, a versatile collection
 ### Features
 
 - **useArray**: Manages an array state within your React components, offering a variety of methods for array manipulation.
+- **useCookie**:  Simplifies the management of cookies within your React components.
 - **useCursor**: Designed to track and return the cursor's position on the screen.
 - **useDebounce**: Debounce function calls, delaying execution for improved performance in scenarios like search operations or other asynchronous tasks.
 - **useDoubleClick**: Allows you to handle both single-click and double-click events with ease. You can use it to define custom behavior when a user clicks once or double-clicks on an element.
@@ -527,5 +528,32 @@ function MyComponent() {
 }
 
 export default MyComponent;
+
+```
+
+### `useCookie`
+
+The `useCookie`  hook simplifies the management of cookies within your React components. It allows you to retrieve and update cookie values easily. Here's a brief example of how to use it:
+
+```jsx
+import React from 'react';
+import { useCookie } from './useCookie';
+
+const CookieComponent: React.FC = () => {
+  const [cookieValue, setCookieValue] = useCookie('user', 'defaultUser');
+
+  return (
+    <div>
+      <h2>Cookie Value</h2>
+      <p>Current Cookie: {cookieValue}</p>
+      <button onClick={() => setCookieValue('newUser')}>
+        Update Cookie
+      </button>
+    </div>
+  );
+};
+
+export default CookieComponent;
+
 
 ```
